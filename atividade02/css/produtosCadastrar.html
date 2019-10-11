@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cadastrar Produto</title>
+	<link rel="stylesheet" href="principal.css">
+	<link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+	<h1>Cadastrar Produto</h1>
+    <form method="post" action="principal.html">
+		<div>
+		<label for="nome">Nome:</label>
+		<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto" >
+
+        <br>
+        
+        <label for="idproduto">Id Produto :</label>
+        <input type="number" name="idproduto" id="idproduto" max="9999999">
+        
+        <br>
+
+		<!-- Label se referencia aos id nao aos nomes -->
+		<label for="peso">Peso:</label>
+		<input type="number" name="peso" id="peso" max="999">
+		<br>
+
+		<label>Unidade de Medida</label>
+
+		<br>
+		<!-- radio associado ao nome fazendo com que a marcação seja unica -->
+		<div class="radio">
+		<input type="radio" id="kg" name="medidas" value="kg" >
+		<label for="kg">KiloGrama</label>
+
+		<br>
+
+		<input type="radio" id="g" name="medidas" value="g">
+		<label for="g">Grama</label>
+
+		<br>
+
+		<input type="radio" id="mg" name="medidas" value="NB">
+		<label for="mg">Miligrama</label>	
+		</div>
+		<br>
+
+		<label for="valor">Valor:</label>
+        <input type="number" name="valor" id="valor" max="9999">
+
+		<br>	
+
+		<label for="estoque">Estoque Inicial</label>
+		<input type="number" name="estoque" id="estoque" max="9999">
+
+        <br>
+		<div class="radio">
+        <label>Mercado</label>
+
+		<br>   
+
+        <input type="radio" name="mercado" id="interno">
+        <label for="interno">Interno</label>
+
+        <br>
+
+        <input type="radio" name="mercado" id="externo">
+        <label for="externo">Externo</label>
+		
+		</div>
+
+        <br>
+        
+		<!-- combo box -->
+		<label for="fornecedor">Fornecedor</label>
+		<select name="fornecedor" id="fornecedor">
+			<option disabled selected value="0">Selecione</option>
+			<option value="1">Nire</option>
+			<option value="2">Fuma</option>
+			<option value="3">Adadis</option>
+			<option value="4">Calvim Klaim</option>
+		
+		</select>
+
+		<br>
+		<br>
+		</div>
+		<input type="submit" name="cadastro" value="Cadastrar" class="botao">
+		<input type="reset" name="limpar" value="Limpar" class="botao">
+
+	</form>
+    
+	<br>
+	<br>
+    <a href="principal.html">Voltar</a>
+</body>
+</html>

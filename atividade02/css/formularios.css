@@ -1,0 +1,27 @@
+html{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top:5%;
+}
+input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid rgb(11, 24, 0);
+    border-radius: 5px;
+}
+label {
+    font-family: arial;
+    font-size: 14pt;
+}
+
+.botao{
+    width: 20%;
+    height: 30%;
+    padding: 5px;
+    border: 1px solid #e5e5e5;
+    
+}
+.radio{
+    margin: 1px;
+    padding: 1px;
+}

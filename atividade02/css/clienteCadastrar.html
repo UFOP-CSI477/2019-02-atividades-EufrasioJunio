@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="formularios.css">
+    <link rel="stylesheet" href="principal.css" >
+</head>
+
+<body>
+
+    <h1>Cadastrar Cliente</h1>
+    <form method="post" action="principal.html">
+        <div class="principal">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite o nome da pessoa">
+
+        <br>
+
+        <label for="endereço">Endereço:</label>
+        <input type="text" name="endereço" id="endereço" placeholder="Rua, Cidade, Estado">
+
+        <br>
+
+        <label for="cpf">CPF:</label>
+        <input type="number" name="cpf" id="cpf" max="99999999999">
+
+        <br>
+
+        <label for="numerocadastro">Numero de Cadastro:</label>
+        <input type="number" name="numerocadastro" id="numerocadastro" max="99999999">
+
+        <br>
+        </div>
+        <input type="submit" name="cadastro" value="Cadastrar " class="botao">
+        <input type="reset" name="limpar" value="Limpar" class="botao">
+
+    </form>
+    <br>
+    <br>
+    <br>
+    <a href="principal.html">Voltar</a>
+</body>
+
+</html>

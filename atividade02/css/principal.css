@@ -1,0 +1,28 @@
+h1{
+    color: white;
+    background-color:black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+h2{ color: white;
+    background-color:grey;
+    padding: 5px;
+    text-decoration: none;}
+
+a{
+    color: white;
+    background-color: rgb(50, 50, 92);
+    padding: 1%;
+    margin: 1%;
+    text-decoration: none;
+ }
+ a:hover {
+    background-color: rgb(115, 246, 8);
+}
+
+/* Link-> momento do click */
+a:active {
+    background-color: green;
+    color:black;
+}

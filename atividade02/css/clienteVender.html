@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Venda</title>
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="formularios.css">
+</head>
+<body>
+    <h1>Vender</h1>
+    <form action="principal.html" method="POST">
+            <div class="principal">
+            <label for="fornecedor">Fornecedor</label>
+            <select name="fornecedor" id="fornecedor">
+                <option disabled selected value="0">Selecione</option>
+                <option value="1">Nire</option>
+                <option value="2">Fuma</option>
+                <option value="3">Adadis</option>
+                <option value="4">Calvim Klaim</option>
+            
+            </select>
+
+            <br>
+           
+            <label for="clientes">Clientes</label>
+            <select name="clientes" id="clientes">
+                <option disabled selected value="0">Selecione</option>
+                <option value="1">Ana Maria Braga</option>
+                <option value="2">Carlos Massa</option>
+                <option value="3">Eliana</option>
+                <option value="4">Jô Soares</option>
+                <option value="5">Xuxa Meneguel</option>
+            
+            </select>
+            </div>
+            <input type="submit" name="cadastro" value="Cadastrar" class="botao">
+            <input type="reset" value="Limpar" class="botao">
+    </form>
+    <br>
+    
+    <a href="principal.html">Voltar</a>
+</body>
+</html>
