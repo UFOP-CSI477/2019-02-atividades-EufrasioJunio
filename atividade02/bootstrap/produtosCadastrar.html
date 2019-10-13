@@ -1,95 +1,127 @@
 <!DOCTYPE html>
 <html lang="br" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastrar Produto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="bootstrap.css">
+	<title>Cadastrar Produto</title>
 </head>
+
 <body>
-    <form method="post" action="principal.html">
-		<label for="nome">Nome:</label>
-		<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto" >
+	<div class="text-center">
+		<h1>Cadastrar Produto</h1>
+	</div>
+	<div class="row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">
+			<form method="post" action="principal.html">
+				<div class="form-group">
+					<label for="nome">Nome:</label>
+					<input type="text" name="nome" id="nome" placeholder="Digite o nome do produto">
+				</div>
 
-        <br>
-        
-        <label for="idproduto">Id Produto :</label>
-        <input type="number" name="idproduto" id="idproduto" max="9999999">
-        
-        <br>
 
-		<!-- Label se referencia aos id nao aos nomes -->
-		<label for="peso">Peso:</label>
-		<input type="number" name="peso" id="peso" max="999">
-		<br>
+				<div class="form-group">
+					<label for="idproduto">Id Produto :</label>
+					<input type="number" name="idproduto" id="idproduto" max="9999999">
+				</div>
 
-		<label>Unidade de Medida</label>
 
-		<br>
-		<!-- radio associado ao nome fazendo com que a marcação seja unica -->
-		<input type="radio" id="kg" name="medidas" value="kg" >
-		<label for="kg">KiloGrama</label>
 
-		<br>
+				<div class="form-group">
+					<label for="peso">Peso:</label>
+					<input type="number" name="peso" id="peso" max="999">
+				</div>
 
-		<input type="radio" id="g" name="medidas" value="g">
-		<label for="g">Grama</label>
+				<!-- Label se referencia aos id nao aos nomes -->
 
-		<br>
+				<div class="form-group">
+					<label>Unidade de Medida</label>
 
-		<input type="radio" id="mg" name="medidas" value="NB">
-		<label for="mg">Miligrama</label>	
+					<div class="form-check">
+						<input type="radio" id="kg" name="medidas" value="kg">
+						<label for="kg">KiloGrama</label>
+					</div>
+					<!-- radio associado ao nome fazendo com que a marcação seja unica -->
 
-		<br>
 
-		<label for="valor">Valor:</label>
-        <input type="number" name="valor" id="valor" max="9999">
+					<div class="form-check">
+						<input type="radio" id="g" name="medidas" value="g">
+						<label for="g">Grama</label>
+					</div>
 
-		<br>	
 
-		<label for="estoque">Estoque Inicial</label>
-		<input type="number" name="estoque" id="estoque" max="9999">
 
-        <br>
+					<div class="form-check">
+						<input type="radio" id="mg" name="medidas" value="NB">
+						<label for="mg">Miligrama</label>
+					</div>
 
-        <label>Mercado</label>
 
-        <br>   
+				</div>
 
-        <input type="radio" name="mercado" id="interno">
-        <label for="interno">Interno</label>
 
-        <br>
+				<div class="form-group">
+					<label for="valor">Valor:</label>
+					<input type="number" name="valor" id="valor" max="9999">
+				</div>
 
-        <input type="radio" name="mercado" id="externo">
-        <label for="externo">Externo</label>
 
-		<label>Áreas de Interesse</label>
 
-        <br>
-        
-		<!-- combo box -->
-		<label for="fornecedor">Fornecedor</label>
-		<select name="fornecedor" id="fornecedor">
-			<option disabled selected value="0">Selecione</option>
-			<option value="1">Nire</option>
-			<option value="2">Fuma</option>
-			<option value="3">Adadis</option>
-			<option value="4">Calvim Klaim</option>
-		
-		</select>
+				<div class="form-group">
+					<label for="estoque">Estoque Inicial</label>
+					<input type="number" name="estoque" id="estoque" max="9999">
+				</div>
 
-		<br>
 
-		<!-- <input type="submit" name="cadastro" value="Cadastrar"> -->
-		<input type="reset" name="limpar" value="Limpar">
 
-	</form>
+				<div class="form-group">
+					<label>Mercado</label>
+					<div class="form-check">
+						<input type="radio" name="mercado" id="interno">
+						<label for="interno">Interno</label>
+					</div>
 
-    <a href="principal.html">Cadastrar</a>
-    
-    <br>
-    
-    <a href="principal.html">Voltar</a>
+					<div class="form-check">
+						<input type="radio" name="mercado" id="externo">
+						<label for="externo">Externo</label>
+					</div>
+
+				</div>
+
+
+
+				<div class="form-group">
+					<!-- combo box -->
+					<label for="fornecedor">Fornecedor</label>
+					<select name="fornecedor" id="fornecedor" class="form-control">
+						<option disabled selected value="0">Selecione</option>
+						<option value="1">Nire</option>
+						<option value="2">Fuma</option>
+						<option value="3">Adadis</option>
+						<option value="4">Calvim Klaim</option>
+
+					</select>
+				</div>
+
+
+
+
+				<div class="form-group">
+					<input type="submit" name="cadastro" value="Cadastrar" class="btn btn-success">
+					<input type="reset" name="limpar" value="Limpar" class="btn btn-warning">
+				</div>
+
+
+
+			</form>
+
+			<a href="principal.html" class="btn btn-dark">Voltar</a>
+		</div>
+	</div>
+
 </body>
+
 </html>

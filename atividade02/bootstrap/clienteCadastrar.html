@@ -5,43 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
     <title>Cadastro de Clientes</title>
 </head>
 
 <body>
+    <div class="text-center">
+        <h1>Cadastrar Cliente</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <form method="post" action="principal.html">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome da pessoa" class="form-control form-control-lg">
+                </div>
 
-    <h1>Cadastrar Cliente</h1>
-    <form method="post" action="principal.html">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" placeholder="Digite o nome da pessoa">
+                <div class="form-group">
+                    <label for="endereço">Endereço:</label>
+                    <input type="text" name="endereço" id="endereço" placeholder="Rua, Cidade, Estado"class="form-control form-control-lg">
+                </div>
 
-        <br>
 
-        <label for="endereço">Endereço:</label>
-        <input type="text" name="endereço" id="endereço" placeholder="Rua, Cidade, Estado">
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="number" name="cpf" id="cpf" max="99999999999"class="form-control form-control-lg">
+                </div>
 
-        <br>
 
-        <label for="cpf">CPF:</label>
-        <input type="number" name="cpf" id="cpf" max="99999999999">
 
-        <br>
+                <div class="form-group">
+                    <label for="numerocadastro">Numero de Cadastro:</label>
+                    <input type="number" name="numerocadastro" id="numerocadastro" max="99999999"class="form-control form-control-lg">
+                </div>
 
-        <label for="numerocadastro">Numero de Cadastro:</label>
-        <input type="number" name="numerocadastro" id="numerocadastro" max="99999999">
 
-        <br>
+                <br>
 
-        <!-- <input type="submit" name="cadastro" value="Cadastrar"> -->
-        <input type="reset" name="limpar" value="Limpar">
+                 <input type="submit" name="cadastro" value="Cadastrar" class="btn btn-success">
 
-    </form>
+                <input type="reset" name="limpar" value="Limpar" class="btn btn-warning">
+               
+               
+            </form>
+            <br>
+            <a href="principal.html" class="btn btn-dark">Voltar</a>
+        </div>
 
-    <a href="principal.html">Cadastrar</a>
+    </div>
 
-    <br>
 
-    <a href="principal.html">Voltar</a>
+
 </body>
 
 </html>

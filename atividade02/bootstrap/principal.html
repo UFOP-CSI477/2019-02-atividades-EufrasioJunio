@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="br" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
     <title>Principal</title>
 </head>
+
 <body>
-    <h1>Principal</h1>
-    <br>
+    <div class="jumbotron text-center">
+        <h1>Principal</h1>
 
-    <h2>Produtos</h2>
-    <a href="produtosListar.html">Listar</a>
-    <a href="produtosCadastrar.html">Cadastrar</a>
-    <br>
-
-    <h2>Cliente</h2>
-    <a href="clienteListar.html">Listar</a>
-    <a href="clienteCadastrar.html">Cadastrar</a>
-    <a href="clienteVender.html">Vender</a>
-    <br>
-    <br>
-    <a href="https://www.matandorobosgigantes.com">Sair</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="">Produtos</h2>
+                <a href="produtosListar.html" class="btn btn-primary">Listar</a>
+                <a href="produtosCadastrar.html" class="btn btn-secondary">Cadastrar</a>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="">Cliente</h2>
+                <a href="clienteListar.html" class="btn btn-primary">Listar</a>
+                <a href="clienteCadastrar.html" class="btn btn-secondary">Cadastrar</a>
+                <a href="clienteVender.html" class="btn btn-success">Vender</a>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.matandorobosgigantes.com" class="btn btn-danger">Sair</a>
 </body>
+
 </html>
