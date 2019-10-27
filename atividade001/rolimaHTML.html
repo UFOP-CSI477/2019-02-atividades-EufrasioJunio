@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="rolimaJS.js"></script>
+    <title>Corrida de Rolimã</title>
+</head>
+
+<body>
+    <div class="text-center">
+        <h1>Registrar Corredores</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+
+            <form method="post" action="principal.html" name="dados">
+                <div class="form-group">
+                    <label for="posicao">Posição:</label>
+                    <input type="number" name="posicao" id="posicao" placeholder="Posição na largada"
+                        class="form-control form-control-lg">
+                </div>
+
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome da pessoa"
+                        class="form-control form-control-lg">
+                </div>
+
+                <div class="form-group">
+                    <label for="tempo">Tempo:</label>
+                    <input type="number" name="tempo" id="tempo" max="99999" class="form-control form-control-lg">
+                </div>
+
+
+                <input id="registrar" type="button" name="registrar" value="Registrar" class="btn btn-success"
+                    onclick="addCorredor()">
+
+                <input type="reset" name="limpar" value="Limpar" class="btn btn-warning">
+
+
+            </form>
+
+            <input type="button" value="Resultado" onclick="colocacao()" class="btn btn-primary">
+
+        </div>
+
+    </div>
+    <br>
+    <div name="tabela" id="tabela" style="display: none;">
+        <table id="T1" class="table ">
+            <caption>Largada</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Posição</th>
+                    <th>Nome</th>
+                    <th>Tempo</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <br>
+
+    <div name="tabelaFinal" id="tabelaFinal" style="display: none;">
+        <h2>Resultado Final</h2>
+        <table id="T2" class="table ">
+            <caption>Chegada</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Colocação</th>
+                    <th>Largada</th>
+                    <th>Nome</th>
+                    <th>Tempo</th>
+                    <th>Informativo</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+
+
+</body>
+
+</html>
