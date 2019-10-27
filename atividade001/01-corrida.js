@@ -42,7 +42,7 @@ function addCorredor() {
 }
 
 function ordenar() {
-
+    // Gabriel Nepomuceno me passou essa função
     corredores.sort((a, b) => parseFloat(a.tempo) - parseFloat(b.tempo));
 }
 
@@ -68,6 +68,7 @@ function colocacao() {
     let aux = 1;
     tempo = corredores[0].tempo;
     corredores.forEach(elem => {
+        // Encontrei na internet o modelo de construção de tabela em Js
         let nlinha = document.createElement('tr');
         if (tempo >= elem.tempo) {
             nlinha.insertCell(0).innerHTML = aux;
