@@ -67,7 +67,6 @@ function colocacao() {
     ordenar();
     let aux = 1;
     tempo = corredores[0].tempo;
-    console.log(corredores)
     corredores.forEach(elem => {
         let nlinha = document.createElement('tr');
         if (tempo >= elem.tempo) {

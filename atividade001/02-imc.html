@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="br" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculo imc</title>
+    <script src="02-imc.js"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <div class="text-center jumbotron">
+        <h1>Calculo de Índice de Massa Corporal</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+
+            <form method="post" action="principal.html" name="dados">
+                <div class="form-group">
+                    <label for="peso">Peso:</label>
+                    <input type="number" name="peso" id="peso" placeholder="Peso em kilogramas"
+                        class="form-control form-control-lg">
+                </div>
+
+                <div class="form-group">
+                    <label for="altura">Altura:</label>
+                    <input type="number" name="altura" id="altura" placeholder="Digite a Altura em metros"
+                        class="form-control form-control-lg">
+                </div>
+
+                <input type="button" value="IMC" onclick="calcular()" class="btn btn-success">
+                <input type="reset" name="limpar" value="Limpar" class="btn btn-warning">
+            </form>
+            <br>
+            
+                <div class="alert" id="resultado"></div>
+                <div class="alert" id="ideal"></div>
+            
+           
+
+        </div>
+
+    </div>
+</body>
+
+</html>
