@@ -1,0 +1,3 @@
+A tela de login não funciona mais ela leva para a tela de registro onde é o Create dos User.
+A tela inical é onde fica listado todos os Subjects.
+Não consegui implemetar a parte de login e autentificação, então fiz as migrate e o Crud dos objetos.
