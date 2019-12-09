@@ -1,9 +1,14 @@
-@extends('principal')
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
       <div class="container">
       <div class="row">
+        @guest
+        @else
+          @if (Auth::user()->type ==1)
           <a href="{{route('subjects.create')}}" class="btn btn-success">Add subject</a>
+          @endif
+        @endguest  
           <br>
           <div class="col-sm-9 col-md7 col-lg-12 mx-auto">
               <table class="table table-striped table-bordered">
@@ -11,6 +16,7 @@
                     <tr>
                       <th>Subject</th>
                       <th>Preço</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>

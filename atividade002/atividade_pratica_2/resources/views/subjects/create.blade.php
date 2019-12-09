@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Create Subject -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
 
 

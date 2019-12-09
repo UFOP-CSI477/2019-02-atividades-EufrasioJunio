@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Edit Subject -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
  
   <div class="container">

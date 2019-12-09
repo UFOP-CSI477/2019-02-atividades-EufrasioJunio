@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') All Requests -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
 
   <div class="container">

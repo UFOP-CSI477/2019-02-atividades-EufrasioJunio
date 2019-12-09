@@ -6,6 +6,7 @@ use App\Requet;
 use App\User;
 use App\Subject;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RequetController extends Controller
 {
@@ -13,10 +14,15 @@ class RequetController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        $requets = Requet::orderBy('date')->get();
+        $requets = Requet::where('user_id','=',Auth::user()->id)->get();
         return view('requets.index', ['requets' => $requets]);
     }
 
@@ -27,11 +33,10 @@ class RequetController extends Controller
      */
     public function create()
     {
-        $users = User::orderBy('name')->get();
         $subjects = Subject::orderBy('name')->get();
         return view(
             'requets.create',
-            ['users' => $users, 'subjects' => $subjects]
+            [ 'subjects' => $subjects]
         );
     }
 
@@ -45,9 +50,10 @@ class RequetController extends Controller
     {
         $requet = new Requet();
         $requet->fill($request->all());
+        $requet->user_id = Auth::user()->id;
         $requet->save();
         // requet$requet::create($request->all());
-
+        session()->flash('mensagem', 'request successfully created!');
         return redirect()->route('requets.show', $requet);
     }
 
@@ -70,11 +76,10 @@ class RequetController extends Controller
      */
     public function edit(Requet $requet)
     {
-        $users = User::orderBy('name')->get();
         $subjects= Subject::orderBy('name')->get();
         return view(
             'requets.edit',
-            ['users' => $users,'subjects'=>$subjects, 'requet' => $requet]
+            ['subjects'=>$subjects, 'requet' => $requet]
         );
     }
 
@@ -88,10 +93,11 @@ class RequetController extends Controller
     public function update(Request $request, Requet $requet)
     {
         $requet->fill($request->all());
+        $requet->user_id = Auth::user()->id;
         //Persiste no BD  
 
         $requet->save();
-        session()->flash('mensagem', 'request atualizada com sucesso!');
+        session()->flash('mensagem', 'request updated successfully!');
 
         return redirect()->route('requets.show', $requet);
     }
@@ -105,7 +111,7 @@ class RequetController extends Controller
     public function destroy(Requet $requet)
     {
         $requet->delete();
-        session()->flash('mensagem', 'request excluida com sucesso!');
-        return redirect()->route('home');
+        session()->flash('mensagem', 'request deleted successfully!');
+        return redirect()->route('protocols');
     }
 }

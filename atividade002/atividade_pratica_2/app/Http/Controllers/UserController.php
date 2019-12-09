@@ -11,10 +11,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(User $user)
     {
-        $users = User::orderBy('name')->get();
-        return view ('users.index', [ 'users' => $users]);
+        // $users = User::orderBy('name')->get();
+        // return view ('users.index', [ 'users' => $users]);
     }
 
     /**
@@ -24,7 +28,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('users.create');
+       // return view('users.create');
     }
 
     /**
@@ -35,17 +39,17 @@ class UserController extends Controller
      */
     public function store(Request $request)
      {
-        //   if ( User::orderBy('nome')->get();
-        //  dd($request);
-        $user= new User;
-        $user->fill($request->all());
-        $user->type= 2;
-        $user->save();
-        // User::create($user);
+        // //   if ( User::orderBy('nome')->get();
+        // //  dd($request);
+        // $user= new User;
+        // $user->fill($request->all());
+        // $user->type= 2;
+        // $user->save();
+        // // User::create($user);
 
-        //return redict('/cidades');
+        // //return redict('/cidades');
         
-        return redirect()->route('users.show',$user);
+        // return redirect()->route('users.show',$user);
     }
 
     /**
@@ -56,7 +60,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('users.show',['user'=>User::findOrFail($user->id)]);
+        //return view('users.show',['user'=>User::findOrFail($user->id)]);
     }
 
     /**
@@ -101,7 +105,7 @@ class UserController extends Controller
     {
         $user->delete();
         session()->flash('mensagem', 'user excluido com sucesso!');
-        return redirect()->route('home');
+        return redirect()->route('protocols');
     }
     
 }

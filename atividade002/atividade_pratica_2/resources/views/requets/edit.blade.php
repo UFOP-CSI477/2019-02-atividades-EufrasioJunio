@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Edit Request -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
   <div class="container">
         <div class="row">
@@ -13,20 +12,8 @@
                         @csrf {{--esconde algumas caracteristicas da interface para dificultar uma injeção no bd  --}}
                         @method('PATCH') {{-- necessario para o methodo update  pois ele so reconhece methodo patch--}}
                             <div class="form-label-group">
-                                <label for="user_id">User</label>
-                                <select name="user_id" id="user_id" class="form-control"required autofocus>
-                                    @foreach ($users as $u)
-                                        <option value="{{ $u->id }}"
-                                            @if($u->id == $requet->user_id)
-                                                selected
-                                            @endif
-                                        >{{ $u->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div class="form-label-group">
                                 <label for="user_id">Subject</label>
-                                <select name="Subject_id" class="form-control" required autofocus>
+                                <select name="subject_id" class="form-control" required autofocus>
                                     @foreach ($subjects as $s)
                                             <option value="{{ $s->id }}"
                                             @if($s->id == $requet->subject_id)

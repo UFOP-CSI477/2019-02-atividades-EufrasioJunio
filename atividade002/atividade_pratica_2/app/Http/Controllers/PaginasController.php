@@ -13,9 +13,4 @@ public function index()
         return view ('lista', [ 'subjects' => $subjects]);
     }
 
-public function login(){
-    return view ('users.login');
-
-}
-
 }

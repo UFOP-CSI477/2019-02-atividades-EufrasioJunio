@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Edit User -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
 
  
@@ -24,10 +23,7 @@
                             <label for="email">Email:</label>
                             <input type="text" name="email" id="email" value = "{{$user->email}}" required autofocus class="form-control"></p>
                         </div>
-                        <div class="form-label-group">
-                            <label for="password">Password:</label>
-                            <input type="text" name="password" id="password" value = "{{$user->password}}" required autofocus class="form-control"></>
-                        </div>
+                       
                         <br>
                         <input type="submit" name="btnSalvar" value="Update" class="btn btn-primary btn-block">
                   </form>

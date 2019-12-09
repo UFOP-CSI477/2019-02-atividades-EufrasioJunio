@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Show Subject: {{$subject->name}} -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
 <div class="container">
                 <div class="row">
@@ -10,15 +9,16 @@
                                 
                                 <h4>Price:{{$subject->price}}</h4>
                                 
-                                
-                                <a href="{{route('subjects.edit',$subject)}}" class="btn btn-primary">Edit</a>
-                                <br>
-                           
-                                <form method="POST" action="{{route('subjects.destroy',$subject)}}" onsubmit="return confirm('Confirm user exclusion?')">
-                                        @csrf
-                                        @method('DELETE')
-                                        <input type='submit' class='btn btn-danger btn-block' value='Delete'>
-                                </form>   
+                                @if(Auth::user()->type == 1)
+                                    <a href="{{route('subjects.edit',$subject)}}" class="btn btn-primary">Edit</a>
+                                    <br>
+                            
+                                    <form method="POST" action="{{route('subjects.destroy',$subject)}}" onsubmit="return confirm('Confirm subject exclusion?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <input type='submit' class='btn btn-danger btn-block' value='Delete'>
+                                    </form> 
+                                @endif
                     </div>
                 </div>
                 </div>

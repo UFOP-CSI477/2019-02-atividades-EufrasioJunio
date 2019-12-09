@@ -1,6 +1,5 @@
-@extends('principal')
-@section('pageTitle') Show Request: {{$requet->id}} -@endsection
-@section('conteudo')
+@extends('layouts.app')
+@section('content')
 
 <div class="container">
                 <div class="row">
@@ -15,7 +14,7 @@
                                 
                                 <a href="{{route('requets.edit',$requet)}}" class="btn btn-primary btn-block">Edit</a>
                                 <br>
-                                <form method="POST" action="{{route('requets.destroy',$requet)}}" onsubmit="return confirm('Confirm user exclusion?')">
+                                <form method="POST" action="{{route('requets.destroy',$requet)}}" onsubmit="return confirm('Confirm request exclusion?')">
                                         @csrf
                                         @method('DELETE')
                                         <input type='submit' class='btn btn-danger btn-block' value='Delete'>

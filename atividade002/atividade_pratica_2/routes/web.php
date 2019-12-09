@@ -10,9 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',['as'=>'home','uses'=>'PaginasController@index'] );
+Route::get('/','PaginasController@index')->name('protocols');
 Route::get('/login','PaginasController@login');
 Route::resource('/users', 'UserController');
 Route::resource('/subjects', 'SubjectController');
 Route::resource('/requets', 'RequetController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@home')->name('home');
